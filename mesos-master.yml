@@ -1,0 +1,55 @@
+---
+- hosts: mesos-master
+  become: true
+
+  tasks:
+  - name: Install software-properties-common
+    apt:
+      name: "{{ start_packages }}"
+      update_cache: yes
+    vars:
+      start_packages:
+      - curl
+      - libcurl3-nss
+      - vim
+      - software-properties-common
+
+  - name: Add java gpg key
+    apt_key:
+      keyserver: hkp://keyserver.ubuntu.com:80
+      id: EEA14886
+
+  - apt_repository:
+      repo: deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main
+      state: present
+      update_cache: yes
+
+  - name: Accept oracle license
+    debconf:
+      name: oracle-java8-installer
+      question: shared/accepted-oracle-license-v1-1
+      value: 'true'
+      vtype: select
+
+  - name: Install Java
+    apt:
+      name: oracle-java8-installer
+      update_cache: yes
+
+  - name: Add gpg key
+    apt_key: 
+      keyserver: hkp://keyserver.ubuntu.com:80
+      id: E56151BF
+
+  - apt_repository:
+      repo: deb http://repos.mesosphere.io/debian wheezy main 
+      state: present
+      update_cache: yes
+
+  - name: Install mesosphere
+    apt:
+      name: "{{ packages }}"
+      update_cache: yes
+    vars:
+      packages:
+      - mesosphere

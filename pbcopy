@@ -1,0 +1,68 @@
+Host *
+ AddKeysToAgent yes
+ UseKeychain yes
+ IdentityFile ~/.ssh/id_rsa
+
+Host 192.168.1.10
+  User vagrant
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Users/aakash.johari/Documents/aurora/.vagrant/machines/mesos-master-1/virtualbox/private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+
+Host 192.168.1.11
+  User vagrant
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Users/aakash.johari/Documents/aurora/.vagrant/machines/mesos-master-2/virtualbox/private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+
+Host 192.168.1.20 
+  User vagrant
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Users/aakash.johari/Documents/aurora/.vagrant/machines/mesos-slave-1/virtualbox/private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+
+Host 192.168.1.21 
+  User vagrant
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Users/aakash.johari/Documents/aurora/.vagrant/machines/mesos-slave-2/virtualbox/private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+
+Host 192.168.1.22 
+  User vagrant
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Users/aakash.johari/Documents/aurora/.vagrant/machines/mesos-slave-3/virtualbox/private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+
+Host 192.168.1.30
+  User vagrant
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Users/aakash.johari/Documents/aurora/.vagrant/machines/zookeeper/virtualbox/private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+
+Host 192.168.1.40 
+  User vagrant
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Users/aakash.johari/Documents/aurora/.vagrant/machines/aurora/virtualbox/private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+

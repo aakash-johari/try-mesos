@@ -1,0 +1,77 @@
+Host mesos-master-1
+  HostName 127.0.0.1
+  User vagrant
+  Port 2222
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Users/aakash.johari/Documents/aurora/.vagrant/machines/mesos-master-1/virtualbox/private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+
+Host mesos-master-2
+  HostName 127.0.0.1
+  User vagrant
+  Port 2200
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Users/aakash.johari/Documents/aurora/.vagrant/machines/mesos-master-2/virtualbox/private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+
+Host mesos-slave-1
+  HostName 127.0.0.1
+  User vagrant
+  Port 2201
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Users/aakash.johari/Documents/aurora/.vagrant/machines/mesos-slave-1/virtualbox/private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+
+Host mesos-slave-2
+  HostName 127.0.0.1
+  User vagrant
+  Port 2202
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Users/aakash.johari/Documents/aurora/.vagrant/machines/mesos-slave-2/virtualbox/private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+
+Host mesos-slave-3
+  HostName 127.0.0.1
+  User vagrant
+  Port 2203
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Users/aakash.johari/Documents/aurora/.vagrant/machines/mesos-slave-3/virtualbox/private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+
+Host zookeeper
+  HostName 127.0.0.1
+  User vagrant
+  Port 2204
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Users/aakash.johari/Documents/aurora/.vagrant/machines/zookeeper/virtualbox/private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+
+Host aurora
+  HostName 127.0.0.1
+  User vagrant
+  Port 2205
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Users/aakash.johari/Documents/aurora/.vagrant/machines/aurora/virtualbox/private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+
